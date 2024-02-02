@@ -14,7 +14,6 @@ func count() int {
 }
 
 func surprise() int {
-	//todo delete item and shrink array
 	i := rand.Intn(len(box))
 	item := box[i]
 	box = append(box[:i], box[i+1:]...)

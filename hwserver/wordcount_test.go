@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 	"testing"
 )
 
@@ -14,5 +15,14 @@ func TestWordCount(t *testing.T) {
 	//could checkout https://github.com/google/go-cmp as a better first class solution
 	if fmt.Sprint(output) != fmt.Sprint(expected) {
 		t.Errorf("Epected to find needle but got false")
+	}
+}
+
+func TestFibonacci(t *testing.T) {
+	expected := "[0 1 2 3 5 8 13]"
+	actual := Fibonacci(7)
+
+	if strings.Compare(expected, actual) != 0 {
+		t.Error("Fib strings are not equal")
 	}
 }
